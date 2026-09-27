@@ -108,18 +108,20 @@
 
     .hero-title {
       margin: 0;
+      font-family: "Trebuchet MS","Avenir Next","Segoe UI",sans-serif;
       font-size: clamp(2rem, 4.8vw, 4.8rem);
-      line-height: .98;
-      letter-spacing: -.055em;
-      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -.045em;
+      font-weight: 800;
     }
 
     .hero-main {
-      margin: 12px 0 0;
+      margin: 14px 0 0;
+      font-family: "Arial Rounded MT Bold","Trebuchet MS","Avenir Next Heavy","Segoe UI",sans-serif;
       font-size: clamp(4rem, 13vw, 9.4rem);
-      line-height: .84;
-      letter-spacing: -.08em;
-      font-weight: 1000;
+      line-height: .86;
+      letter-spacing: -.045em;
+      font-weight: 900;
       text-transform: uppercase;
       text-shadow: 0 6px 24px rgba(0,0,0,.18);
     }
@@ -397,7 +399,28 @@
         min-height: 290px;
       }
     }
-  </style>
+  
+.groups-section{margin:14px 0 58px;padding:34px;border-radius:30px;background:linear-gradient(135deg,#fff,#f5f7ff);border:1px solid rgba(11,11,159,.10);box-shadow:0 18px 50px rgba(18,24,60,.10)}
+.groups-heading{text-align:center;margin-bottom:24px}.groups-kicker{color:var(--red);font-size:.72rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.groups-heading h2{margin:5px 0 8px;color:var(--blue);font-family:"Trebuchet MS","Avenir Next","Segoe UI",sans-serif;font-size:clamp(2rem,4.5vw,3.6rem);letter-spacing:-.04em}
+.groups-heading p{margin:0;color:var(--muted)}
+.accordion{display:flex;flex-direction:column;gap:12px;width:100%}
+.accordion-item{width:100%;overflow:hidden;border-radius:20px;background:#fff;border:1px solid rgba(11,11,159,.10);box-shadow:0 8px 24px rgba(20,26,53,.06)}
+.accordion-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 20px;border:0;background:#fff;color:var(--ink);cursor:pointer;text-align:left;font:inherit}
+.accordion-label{display:flex;align-items:center;gap:14px}.accordion-number{width:52px;height:52px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;font-weight:950;font-size:1.15rem}
+.accordion-label strong{display:block;color:var(--blue);font-size:1.08rem}.accordion-label small{display:block;margin-top:3px;color:var(--muted);font-size:.78rem}
+.accordion-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:rgba(229,35,41,.08);color:var(--red);font-size:1.5rem;transition:.2s}
+.accordion-trigger[aria-expanded="true"] .accordion-icon{transform:rotate(45deg)}.accordion-panel{border-top:1px solid rgba(11,11,159,.08)}.accordion-content{padding:22px}
+.constraint-note,.success-note{border-radius:16px;padding:13px 16px;margin:0 0 18px;font-size:.9rem}.constraint-note{background:#fff3f3;border:1px solid rgba(229,35,41,.14);color:#8b252a}.success-note{background:#eef1ff;border:1px solid rgba(11,11,159,.11);color:#29298d;font-weight:700}
+.groups-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.group-card{background:#fff;border:1px solid rgba(11,11,159,.10);border-radius:22px;padding:16px;box-shadow:0 10px 28px rgba(20,26,53,.07)}
+.group-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}.group-number{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;color:#fff;font-weight:950;background:linear-gradient(135deg,var(--blue),var(--blue2))}
+.group-head h3{margin:0;font-size:1.06rem}.group-head p{margin:3px 0 0;color:var(--muted);font-size:.74rem}.members{display:flex;flex-direction:column;gap:7px}.member{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 10px;border-radius:12px}
+.member.adult{background:linear-gradient(90deg,rgba(229,35,41,.10),rgba(229,35,41,.035));border:1px solid rgba(229,35,41,.12)}.member.student{background:linear-gradient(90deg,rgba(11,11,159,.07),rgba(11,11,159,.025));border:1px solid rgba(11,11,159,.08)}
+.person{min-width:0}.person strong{display:block;font-size:.82rem}.role{display:block;margin-bottom:2px;font-size:.58rem;letter-spacing:.09em;text-transform:uppercase;font-weight:900}.adult .role{color:var(--red)}.student .role{color:var(--blue)}
+.school{max-width:82px;text-align:right;color:var(--muted);font-size:.68rem;font-weight:750}
+@media(max-width:1000px){.groups-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.groups-section{padding:22px 14px}.groups-grid{grid-template-columns:1fr}.accordion-trigger{padding:15px}.accordion-content{padding:14px}}
+
+</style>
 </head>
 <body>
   <div class="wrap">
@@ -578,7 +601,376 @@
     </article>
     </main>
 
-    <footer>AEFE · Zone Europe du Sud-Est · INTER-CVL · septembre 2026</footer>
+    
+<section class="groups-section" id="groupes">
+  <div class="groups-heading">
+    <span class="groups-kicker">Organisation INTER-CVL</span>
+    <h2>Propositions de groupes</h2>
+    <p>Les trois propositions sont réunies ici : 5 groupes, 6 groupes et 7 groupes.</p>
+  </div>
+  <div class="accordion">
+    
+    <div class="accordion-item">
+      <button class="accordion-trigger" type="button" aria-expanded="false">
+        <span class="accordion-label"><span class="accordion-number">5</span>
+          <span><strong>5 groupes</strong><small>Afficher la proposition</small></span>
+        </span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-panel" hidden>
+        <div class="accordion-content"><div class="constraint-note"><strong>À noter :</strong> avec 5 groupes, deux élèves de Bucarest doivent nécessairement être ensemble dans un groupe.</div><div class="groups-grid"><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">01</span>
+            <div><h3>Groupe 1</h3><p>2 adultes · 3 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>AGCA Jibid</strong></div>
+      <span class="school">Istanbul</span>
+    </div><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>BARES Marina</strong></div>
+      <span class="school">Milan</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>STAVROSITU Diana</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>DAVI Alberto</strong></div>
+      <span class="school">Turin</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>Dobreva Alexandrina</strong></div>
+      <span class="school">Sofia</span>
+    </div></div>
+        </article><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">02</span>
+            <div><h3>Groupe 2</h3><p>2 adultes · 2 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>STEPHAN LUPO</strong></div>
+      <span class="school">Rome</span>
+    </div><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>SALMON Patricia</strong></div>
+      <span class="school">Milan</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>GHETE Matei</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>EANDI Viola</strong></div>
+      <span class="school">Turin</span>
+    </div></div>
+        </article><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">03</span>
+            <div><h3>Groupe 3</h3><p>1 adulte · 4 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>Sofia Hristova</strong></div>
+      <span class="school">Sofia</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>TOMA Eduard</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>ROUSSENQ Sarah</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>CORNELIO Sofia</strong></div>
+      <span class="school">Turin</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>CALENDA GIACOMO</strong></div>
+      <span class="school">Rome</span>
+    </div></div>
+        </article><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">04</span>
+            <div><h3>Groupe 4</h3><p>1 adulte · 4 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>ROUSSENQ Caroline</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>SCANAVINO Cesare</strong></div>
+      <span class="school">Turin</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>Karachorov Christian</strong></div>
+      <span class="school">Sofia</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>Masin Defne</strong></div>
+      <span class="school">Istanbul</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>BOCCACCIO Noémie</strong></div>
+      <span class="school">Milan</span>
+    </div></div>
+        </article><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">05</span>
+            <div><h3>Groupe 5</h3><p>1 adulte · 4 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>BAVAZZANO Thierry</strong></div>
+      <span class="school">Turin</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>TACHE Ioana</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>MUSIKAS IGLESIAS Ainhoa</strong></div>
+      <span class="school">Milan</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>Erug Leo</strong></div>
+      <span class="school">Istanbul</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>ARS MARIE</strong></div>
+      <span class="school">Rome</span>
+    </div></div>
+        </article></div></div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-trigger" type="button" aria-expanded="false">
+        <span class="accordion-label"><span class="accordion-number">6</span>
+          <span><strong>6 groupes</strong><small>Afficher la proposition</small></span>
+        </span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-panel" hidden>
+        <div class="accordion-content"><div class="success-note">Aucun groupe ne contient deux élèves du même établissement.</div><div class="groups-grid"><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">01</span>
+            <div><h3>Groupe 1</h3><p>1 adulte · 3 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>BAVAZZANO Thierry</strong></div>
+      <span class="school">Turin</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>ROUSSENQ Sarah</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>BOCCACCIO Noémie</strong></div>
+      <span class="school">Milan</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>CALENDA GIACOMO</strong></div>
+      <span class="school">Rome</span>
+    </div></div>
+        </article><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">02</span>
+            <div><h3>Groupe 2</h3><p>1 adulte · 3 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>Sofia Hristova</strong></div>
+      <span class="school">Sofia</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>GHETE Matei</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>DAVI Alberto</strong></div>
+      <span class="school">Turin</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>Masin Defne</strong></div>
+      <span class="school">Istanbul</span>
+    </div></div>
+        </article><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">03</span>
+            <div><h3>Groupe 3</h3><p>1 adulte · 3 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>STEPHAN LUPO</strong></div>
+      <span class="school">Rome</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>TACHE Ioana</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>SCANAVINO Cesare</strong></div>
+      <span class="school">Turin</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>Dobreva Alexandrina</strong></div>
+      <span class="school">Sofia</span>
+    </div></div>
+        </article><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">04</span>
+            <div><h3>Groupe 4</h3><p>1 adulte · 3 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>AGCA Jibid</strong></div>
+      <span class="school">Istanbul</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>STAVROSITU Diana</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>Karachorov Christian</strong></div>
+      <span class="school">Sofia</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>MUSIKAS IGLESIAS Ainhoa</strong></div>
+      <span class="school">Milan</span>
+    </div></div>
+        </article><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">05</span>
+            <div><h3>Groupe 5</h3><p>2 adultes · 2 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>ROUSSENQ Caroline</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>BARES Marina</strong></div>
+      <span class="school">Milan</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>CORNELIO Sofia</strong></div>
+      <span class="school">Turin</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>ARS MARIE</strong></div>
+      <span class="school">Rome</span>
+    </div></div>
+        </article><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">06</span>
+            <div><h3>Groupe 6</h3><p>1 adulte · 3 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>SALMON Patricia</strong></div>
+      <span class="school">Milan</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>TOMA Eduard</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>EANDI Viola</strong></div>
+      <span class="school">Turin</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>Erug Leo</strong></div>
+      <span class="school">Istanbul</span>
+    </div></div>
+        </article></div></div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-trigger" type="button" aria-expanded="false">
+        <span class="accordion-label"><span class="accordion-number">7</span>
+          <span><strong>7 groupes</strong><small>Afficher la proposition</small></span>
+        </span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-panel" hidden>
+        <div class="accordion-content"><div class="success-note">Aucun groupe ne contient deux élèves du même établissement.</div><div class="groups-grid"><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">01</span>
+            <div><h3>Groupe 1</h3><p>1 adulte · 2 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>AGCA Jibid</strong></div>
+      <span class="school">Istanbul</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>TACHE Ioana</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>MUSIKAS IGLESIAS Ainhoa</strong></div>
+      <span class="school">Milan</span>
+    </div></div>
+        </article><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">02</span>
+            <div><h3>Groupe 2</h3><p>1 adulte · 3 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>Sofia Hristova</strong></div>
+      <span class="school">Sofia</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>SCANAVINO Cesare</strong></div>
+      <span class="school">Turin</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>Erug Leo</strong></div>
+      <span class="school">Istanbul</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>BOCCACCIO Noémie</strong></div>
+      <span class="school">Milan</span>
+    </div></div>
+        </article><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">03</span>
+            <div><h3>Groupe 3</h3><p>1 adulte · 2 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>BAVAZZANO Thierry</strong></div>
+      <span class="school">Turin</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>STAVROSITU Diana</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>ARS MARIE</strong></div>
+      <span class="school">Rome</span>
+    </div></div>
+        </article><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">04</span>
+            <div><h3>Groupe 4</h3><p>1 adulte · 2 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>BARES Marina</strong></div>
+      <span class="school">Milan</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>GHETE Matei</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>CORNELIO Sofia</strong></div>
+      <span class="school">Turin</span>
+    </div></div>
+        </article><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">05</span>
+            <div><h3>Groupe 5</h3><p>1 adulte · 2 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>STEPHAN LUPO</strong></div>
+      <span class="school">Rome</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>ROUSSENQ Sarah</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>Masin Defne</strong></div>
+      <span class="school">Istanbul</span>
+    </div></div>
+        </article><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">06</span>
+            <div><h3>Groupe 6</h3><p>1 adulte · 3 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>SALMON Patricia</strong></div>
+      <span class="school">Milan</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>TOMA Eduard</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>EANDI Viola</strong></div>
+      <span class="school">Turin</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>Karachorov Christian</strong></div>
+      <span class="school">Sofia</span>
+    </div></div>
+        </article><article class="group-card">
+          <div class="group-head">
+            <span class="group-number">07</span>
+            <div><h3>Groupe 7</h3><p>1 adulte · 3 élèves</p></div>
+          </div>
+          <div class="members"><div class="member adult">
+      <div class="person"><span class="role">Adulte</span><strong>ROUSSENQ Caroline</strong></div>
+      <span class="school">Bucarest</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>DAVI Alberto</strong></div>
+      <span class="school">Turin</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>Dobreva Alexandrina</strong></div>
+      <span class="school">Sofia</span>
+    </div><div class="member student">
+      <div class="person"><span class="role">Élève</span><strong>CALENDA GIACOMO</strong></div>
+      <span class="school">Rome</span>
+    </div></div>
+        </article></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>AEFE · Zone Europe du Sud-Est · INTER-CVL · septembre 2026</footer>
   </div>
 
   <dialog id="playerDialog" aria-labelledby="modalSchool">
@@ -630,5 +1022,23 @@
       frame.src = 'about:blank';
     });
   </script>
+
+<script>
+document.querySelectorAll('.accordion-trigger').forEach(trigger=>{
+  trigger.addEventListener('click',()=>{
+    const panel=trigger.nextElementSibling;
+    const isOpen=trigger.getAttribute('aria-expanded')==='true';
+    document.querySelectorAll('.accordion-trigger').forEach(t=>{
+      t.setAttribute('aria-expanded','false');
+      t.nextElementSibling.hidden=true;
+    });
+    if(!isOpen){
+      trigger.setAttribute('aria-expanded','true');
+      panel.hidden=false;
+    }
+  });
+});
+</script>
+
 </body>
 </html>
